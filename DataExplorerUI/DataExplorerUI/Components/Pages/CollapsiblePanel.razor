@@ -1,0 +1,24 @@
+﻿<div class="collapsible-panel">
+    <div class="d-flex" >
+        <h4>@Title</h4><div @onclick="Toggle" class="@GetExpandedClass()" style="cursor: pointer;"></div>
+    </div>
+
+    @if (IsExpanded)
+    {
+        <div class="post-body">
+            @ChildContent
+        </div>
+    }
+</div>
+
+@code {
+    private bool IsExpanded;
+
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    private void Toggle() => IsExpanded = !IsExpanded;
+    private string GetExpandedClass() {
+        return IsExpanded ? "chevron chevron-up" : "chevron chevron-down";
+    }
+}

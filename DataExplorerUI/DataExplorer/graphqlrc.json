@@ -1,0 +1,6 @@
+{
+    "schema": "https://graphqlzero.almansi.me/api",
+    "documents": "DataExplorerDAOs/*.graphql",
+    "namespace": "DataExplorerUI.DataExplorerDAOs",
+    "output": "GraphQLClient"
+}

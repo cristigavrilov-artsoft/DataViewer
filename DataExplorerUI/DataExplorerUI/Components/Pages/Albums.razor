@@ -1,0 +1,51 @@
+@page "/albums"
+@inject DataExplorerUI.Services.AlbumService AlbumService
+@rendermode InteractiveServer
+
+@using DataExplorerModels;
+@using DataExplorerDTOs;
+<PageTitle>Albums</PageTitle>
+
+<h1>Albums</h1>
+
+
+@if (albums == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Album Photo</th>
+                <th>Album Title</th>
+                <th>Created By</th>
+                <th>From Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var album in albums)
+            {
+                <tr>
+                    <td>
+                        <img src="@album.Photo" 
+                             style="width: 40px; height: 40px; object-fit: cover;" />
+                    </td>
+                    <td>@album.Title</td>
+                    <td>@album.CreatedBy</td>
+                    <td>@album.FromCompany</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<AlbumDTO>? albums;
+
+    protected override async Task OnInitializedAsync()
+    {
+        albums = await AlbumService.GetAlbumsAsync() ?? new List<AlbumDTO>();
+    }
+    }

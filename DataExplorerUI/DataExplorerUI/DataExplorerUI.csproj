@@ -5,5 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\DataExplorerModels\DataExplorerModels.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DataExplorerDTOs\DataExplorerDTOs.csproj" />
+	</ItemGroup>
 </Project>

@@ -1,0 +1,34 @@
+@page "/posts"
+@inject DataExplorerUI.Services.PostService PostService
+@rendermode InteractiveServer
+
+@using DataExplorerModels;
+<PageTitle>Posts</PageTitle>
+
+<h1>Posts</h1>
+
+
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul class="card mb-3  border-1 ">
+        @foreach (var post in posts)
+        {
+            <CollapsiblePanel Title="@post.Title">
+                @post.Body
+            </CollapsiblePanel>
+        }
+    </ul>
+}
+
+@code {
+    private List<Post>? posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await PostService.GetPostsAsync() ?? new List<Post>();
+    }
+    }

@@ -1,11 +1,13 @@
 using DataExplorerUI.Components;
-
+using DataExplorerUI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
+builder.Services.AddScoped<PostService>();
+builder.Services.AddScoped<AlbumService>();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5192/") });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,7 +20,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
+app.UseWebSockets();
 app.UseAntiforgery();
 
 app.MapStaticAssets();

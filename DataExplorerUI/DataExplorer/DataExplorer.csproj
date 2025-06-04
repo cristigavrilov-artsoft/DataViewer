@@ -11,11 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DataExplorerModels\DataExplorerModels.csproj" />
   </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\DataExplorerDTOs\DataExplorerDTOs.csproj" />
+	</ItemGroup>
 </Project>
