@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataExplorerDTOs", "DataExp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5EDAEF30-D3DE-45C3-B221-B39F529F68C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataViewerTest", "DataViewerTest\DataViewerTest.csproj", "{FD66E259-2A06-438F-902A-126CD8517E2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{73D4989D-2984-4BB6-BC6E-C6D8390EA7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73D4989D-2984-4BB6-BC6E-C6D8390EA7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73D4989D-2984-4BB6-BC6E-C6D8390EA7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD66E259-2A06-438F-902A-126CD8517E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD66E259-2A06-438F-902A-126CD8517E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD66E259-2A06-438F-902A-126CD8517E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD66E259-2A06-438F-902A-126CD8517E2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

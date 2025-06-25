@@ -7,9 +7,9 @@ namespace DataExplorer.Controllers;
 [Route("/api/posts")]
 public class PostController : ControllerBase
 {
-    private readonly PostService _postService;
+    private readonly PostApiService _postService;
 
-    public PostController(PostService postService)
+    public PostController(PostApiService postService)
     {
         _postService = postService;
     }

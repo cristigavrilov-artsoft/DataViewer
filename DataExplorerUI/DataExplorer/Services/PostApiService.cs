@@ -3,12 +3,12 @@ using DataExplorerModels;
 using DataExplorerDTOs;
 namespace DataExplorer.Services;
 
-public class PostService
+public class PostApiService
 
 {
     private readonly HttpClient _httpClient;
     private readonly string _graphQLEndpoint;
-    public PostService(HttpClient httpClient, IConfiguration configuration)
+    public PostApiService(HttpClient httpClient, IConfiguration configuration)
     {
         _httpClient = httpClient;
         _graphQLEndpoint = configuration["db:graphQLEndpoint"]

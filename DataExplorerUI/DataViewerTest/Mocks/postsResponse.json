@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Test Title",
+        "body": "Test Body"
+    },
+    {
+        "id": 2,
+        "title": "Another Title",
+        "body": "Another Body"
+    }
+]

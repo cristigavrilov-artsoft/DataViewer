@@ -3,12 +3,12 @@ using DataExplorerModels;
 using DataExplorerDTOs;
 namespace DataExplorer.Services;
 
-public class AlbumService
+public class AlbumApiService
 
 {
     private readonly HttpClient _httpClient;
     private readonly string _graphQLEndpoint;
-    public AlbumService(HttpClient httpClient, IConfiguration configuration)
+    public AlbumApiService(HttpClient httpClient, IConfiguration configuration)
     {
         _httpClient = httpClient;
         _graphQLEndpoint = configuration["db:graphQLEndpoint"]

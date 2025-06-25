@@ -12,7 +12,7 @@ public class AlbumService
     {
         _httpClient = httpClient;
        _albumsEndpoint = configuration["API:AlbumsEndpoint"]
-            ?? throw new InvalidOperationException("Missing Albums endpoint");
+            ?? throw new InvalidOperationException("Missing Albums Endpoint");
     }
 
     public async Task<List<AlbumDTO>> GetAlbumsAsync()

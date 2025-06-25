@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Test Album",
+        "createdBy": "testUser",
+        "fromCompany": "Test Company",
+        "photo": "testUrl"
+    },
+    {
+        "id": 2,
+        "title": "Test Album 2",
+        "createdBy": "testUser",
+        "fromCompany": "Test Company",
+        "photo": "testUrl"
+    }
+]

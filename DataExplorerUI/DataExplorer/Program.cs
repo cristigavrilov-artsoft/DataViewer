@@ -7,8 +7,8 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<PostService>();
-builder.Services.AddScoped<AlbumService>();
+builder.Services.AddScoped<PostApiService>();
+builder.Services.AddScoped<AlbumApiService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

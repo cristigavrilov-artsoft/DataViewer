@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 [Route("/api/albums")]
 public class AlbumController : ControllerBase
 {
-    private readonly AlbumService _albumService;
+    private readonly AlbumApiService _albumService;
 
-    public AlbumController(AlbumService albumService)
+    public AlbumController(AlbumApiService albumService)
     {
         _albumService = albumService;
     }
